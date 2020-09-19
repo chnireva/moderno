@@ -1637,6 +1637,44 @@ button.icon-unsorted {
   display: flex;
   justify-content: space-between;
   padding: 30px 0;
+  .jq-selectbox {
+    width: 82px;
+    &__select {
+      height: 27px;
+      padding: 0 10px;
+      border: 1px solid d3d3d3;
+      border-bottom-color: #d3d3d3;
+      border-radius: 0;
+      background: #f9f9f9;
+      box-shadow: none;
+      text-shadow: none;
+      color: #70838d;
+      font-family: 'Roboto-Regular', sans-serif;
+      line-height: 27px;
+      font-size: 13px;
+    }
+
+    &__trigger-arrow {
+      font-size: 13px;
+      right: 18px;
+      line-height: 27px;
+      top: 0;
+      border: none;
+      &::before {
+        content: '\f0d7';
+        font-family: 'icomoon';
+        color: $green;
+      }
+    }
+
+    &__trigger {
+      border-left: none;
+    }
+
+    &__dropdown {
+      top: 25px;
+    }
+  }
 }
 
 .price__product {
@@ -2097,6 +2135,45 @@ button.icon-unsorted {
     background-color: #f9f9f9;
     padding: 0 10px;
   }
+
+  .jq-selectbox {
+    max-width: 540px;
+    width: 100%;
+    &__select {
+      height: 40px;
+      padding: 0 15px;
+      border: 1px solid #d7d7d7;
+      border-bottom-color: #d7d7d7;
+      border-radius: 0;
+      background: #f9f9f9;
+      box-shadow: none;
+      text-shadow: none;
+      color: #707070;
+      font-family: 'Roboto-Regular', sans-serif;
+      line-height: 40px;
+      font-size: 14px;
+    }
+
+    &__trigger-arrow {
+      font-size: 15px;
+      right: 20px;
+      line-height: 40px;
+      top: 0;
+      border: none;
+      &::before {
+        content: '\f0d7';
+        font-family: 'icomoon';
+      }
+    }
+
+    &__trigger {
+      border-left: none;
+    }
+
+    &__dropdown {
+      top: 38px;
+    }
+  }
 }
 // end settings
 
@@ -2300,6 +2377,159 @@ button.icon-unsorted {
     background-repeat: repeat;
   }
 }
+
 // end profile
+
+// start upload
+.upload__inner {
+  background-color: #fff;
+  border: 1px solid #d7d7d7;
+  margin-bottom: 110px;
+  &-title {
+    @include f500;
+    font-size: 24px;
+    color: $bg;
+    padding: 16px 35px 18px;
+    border-bottom: 1px solid #d7d7d7;
+    margin-bottom: 40px;
+  }
+
+  &-content {
+    margin-bottom: 30px;
+    padding-left: 45px;
+    padding-right: 50px;
+  }
+
+  button {
+    color: #fff;
+    background-color: $green;
+    border: none;
+    cursor: pointer;
+    padding: 15px 36px;
+    @include f500;
+    margin-left: 175px;
+  }
+}
+
+.upload-line {
+  margin-bottom: 25px;
+  display: flex;
+  label {
+    min-width: 175px;
+    padding-right: 15px;
+    color: #444;
+    padding-top: 5px;
+    span {
+      color: $green;
+      font-size: 24px;
+    }
+
+    &::placeholder {
+      color: #707070;
+    }
+  }
+
+  select,
+  input,
+  textarea {
+    width: 100%;
+    display: block;
+    border: 1px solid #d7d7d7;
+    height: 40px;
+    background-color: #f9f9f9;
+    padding: 0 18px;
+  }
+
+  textarea {
+    height: 150px;
+    resize: none;
+    padding: 8px 18px;
+  }
+
+  input[type='file'] {
+    outline: none;
+  }
+
+  .jq-file {
+    width: 100%;
+    border-radius: none;
+    box-shadow: none;
+    border: 1px solid #d7d7d7;
+    height: 40px;
+    background-color: #f9f9f9;
+    &__name {
+      box-sizing: border-box;
+      width: 100%;
+      height: 40px;
+      padding: 0 18px;
+      border: none;
+      border-bottom-color: transparent;
+      border-radius: none;
+      background: transparent;
+      box-shadow: none;
+      color: #707070;
+      font-family: 'Roboto-Regular', sans-serif;
+      line-height: 40px;
+      font-size: 12px;
+      margin-left: 100px;
+    }
+
+    &__browse {
+      position: absolute;
+      left: 9px;
+      right: auto;
+      top: 5px;
+      line-height: 26px;
+      font-size: 12px;
+      padding: 0 12px;
+      border: 1px solid #d7d7d7;
+      border-left: 1px solid #d7d7d7;
+      border-radius: none;
+      background: #fff;
+      box-shadow: none;
+      text-shadow: none;
+      color: #444;
+    }
+  }
+
+  .jq-selectbox {
+    width: 100%;
+    &__select {
+      height: 40px;
+      padding: 0 18px;
+      border: 1px solid #d7d7d7;
+      border-bottom-color: #d7d7d7;
+      border-radius: 0;
+      background: #f9f9f9;
+      box-shadow: none;
+      text-shadow: none;
+      color: #707070;
+      font-family: 'Roboto-Regular', sans-serif;
+      line-height: 40px;
+    }
+
+    &__trigger-arrow {
+      font-size: 15px;
+      right: 20px;
+      line-height: 40px;
+      top: 0;
+      border: none;
+      &::before {
+        content: '\f0d7';
+        font-family: 'icomoon';
+      }
+    }
+
+    &__trigger {
+      border-left: none;
+    }
+
+    &__dropdown {
+      top: 38px;
+    }
+  }
+}
+
+// end upload
 
 @import 'media';
