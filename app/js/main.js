@@ -11,7 +11,32 @@ $(function () {
     arrows: false,
     slidesToShow: 4,
     slidesToScroll: 4,
-    autoplay: 3000
+    autoplay: 3000,
+    responsive: [
+      {
+        breakpoint: 1901,
+        settings: {
+          slidesToShow: 3,
+          slidesToScroll: 3,
+          infinite: true,
+          dots: true
+        }
+      },
+      {
+        breakpoint: 1441,
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 1,
+        }
+      },
+      {
+        breakpoint: 801,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+        }
+      },
+    ]
   });
 
   $(".js-range-slider").ionRangeSlider({
